@@ -1,0 +1,188 @@
+body { margin:0; padding:0;font-family: 'Asap', 'sans-serif';color: #555;}
+p {
+  font-size: 16px;
+  line-height: 20px;
+}
+a {color:#567CA3;text-decoration: none;}
+a:hover {color: #4D6379;}
+#banner {
+  position:absolute;
+  top:0;height: 80px;
+  width: 100%;
+  background:#fff;
+  z-index: 10;
+  border-bottom: 1px solid #bbb;
+}
+#banner img.il {
+  cursor: pointer;
+  width: 81px;
+  float: left;
+  margin: 6px;
+  opacity: .6;
+}
+#banner img.il:hover {
+  opacity: .8;
+}
+#banner h1 {
+  float: left;
+  font-size: 40px;
+  line-height: 26px;
+}
+#banner .switcher {
+  float: left;
+  margin: 20px 0px 20px 20px;
+  border: 1px solid #ccc;
+}
+  .switcher a {
+    display: block;
+    float: left;
+    cursor: pointer;
+    background: #fff;
+    padding: 10px;
+    color: #567CA3;
+    text-decoration: none;
+  }
+  .switcher a.all {
+    border-left: 1px solid #ccc;
+  }
+  .switcher a:hover, a.active {
+    background: #eee;
+    color: #4D6379;
+  }
+.legend {
+  padding:25px 0px;
+}
+.legend span {
+  padding: 10px;  
+  width: auto;
+}
+span.ten {
+  box-shadow: inset 0px 0px 6px #6A788D;
+  border: 1px solid #6A788D;
+}
+span.two {
+  margin-left: 10px;
+  background: url(http://i.imgur.com/IsRY0Gi.png);
+  padding-left: 10px;
+}
+#map { position:absolute; top:80px; bottom:0; width:100%; }
+#spinner {
+  display: none;
+  width: 25px;
+  float: left;
+  margin: 26px 15px;
+  position: relative;
+}
+span.icon {
+  width: 28px;
+  height: 28px;
+  padding-right: 10px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  opacity: .5;
+  cursor: pointer;
+  margin: 25px;
+  float: right;
+}
+span.icon:hover {
+  opacity: .8;
+}
+#about {
+  opacity: 0;
+  width: 300px;
+  background: #fff;
+  height: auto;
+  position: absolute;
+  right: 10px;
+  top: 90px;
+  z-index: 10;
+  padding: 20px;
+}
+#about.active {
+  opacity: 1;
+   transition: opacity .5s ease-in-out;
+   -moz-transition: opacity .5s ease-in-out;
+   -webkit-transition: opacity .5s ease-in-out;
+}
+.leaflet-popup-content-wrapper, .map-tooltip {
+  background: #fff;
+  background: rgba(255, 255, 255, .6);
+  /*border: 2px solid #fff;*/
+}
+.leaflet-popup-content .large {
+  font-size: 18px;
+}
+.leaflet-popup-content .title {
+  padding: 5px;
+  font-size: 12px;
+}
+.map-legend .swatch {
+  width:20px;
+  height:20px;
+  float:left;
+  margin-right:10px;
+  }
+.leaflet-popup-close-button {
+  display: none;
+  }
+.leaflet-popup-content-wrapper {
+  pointer-events: none;
+  }
+table {
+  background:#fff;
+  max-width:100%;
+  border-spacing:0;
+  width:100%;
+  margin:10px 0;
+  border:1px solid #ddd;
+  border-collapse:separate;
+  *border-collapse:collapsed;
+  }
+  table th,
+  table td {
+  padding:8px;
+  line-height:18px;
+  text-align:left;
+  border-top:1px solid #ddd;
+  }
+  table th {
+  background:#f6f6f6;
+  text-shadow:0 1px 0 #fff;
+  font-weight:bold;
+  vertical-align:bottom;
+  }
+  table td {
+  vertical-align:top;
+  }
+  table thead:first-child tr th,
+  table thead:first-child tr td {
+  border-top:0;
+  }
+  table tbody + tbody {
+  border-top:2px solid #ddd;
+  }
+  table th + th,
+  table td + td,
+  table th + td,
+  table td + th {
+  border-left:1px solid #ddd;
+  }
+  table thead:first-child tr:first-child th,
+  table tbody:first-child tr:first-child th,
+  table tbody:first-child tr:first-child td {
+  border-top:0;
+  }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 660px) {
+  #banner h1 {
+    display: none;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (max-width: 1024px) {
+  #banner h1 {
+    font-size: 20px;
+    line-height: 50px;
+  }
+}
