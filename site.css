@@ -1,4 +1,4 @@
-body { margin:0; padding:0;font-family: 'Asap', 'sans-serif';color: #555;}
+body { margin:0; padding:0;font-family: 'Arial', 'sans-serif';color: #555;}
 p {
   font-size: 16px;
   line-height: 20px;
@@ -10,7 +10,7 @@ a:hover {color: #4D6379;}
   top:0;height: 80px;
   width: 100%;
   background:#fff;
-  z-index: 10;
+  z-index: 100;
   border-bottom: 1px solid #bbb;
 }
 #banner img.il {
@@ -25,8 +25,8 @@ a:hover {color: #4D6379;}
 }
 #banner h1 {
   float: left;
-  font-size: 40px;
-  line-height: 26px;
+  font-size: 34px;
+  line-height: 32px
 }
 #banner .switcher {
   float: left;
@@ -91,10 +91,12 @@ span.icon:hover {
   opacity: 0;
   width: 300px;
   background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   height: auto;
   position: absolute;
-  right: 10px;
-  top: 90px;
+  right: 0px;
+  bottom: 0px;
+  top: 80px;
   z-index: 10;
   padding: 20px;
 }
