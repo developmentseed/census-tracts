@@ -52,18 +52,22 @@ a:hover {color: #4D6379;}
 .legend {
   padding:25px 0px;
 }
+.legend li {
+  list-style: none;
+  float: left;
+}
 .legend span {
-  padding: 10px;  
-  width: auto;
+  padding: 0px 12px;
+  margin-right: 10px;
 }
 span.ten {
-  box-shadow: inset 0px 0px 6px #6A788D;
-  border: 1px solid #6A788D;
+  border: 3px solid #6A788D;
 }
 span.two {
   margin-left: 10px;
-  background: url(http://i.imgur.com/IsRY0Gi.png);
+  background: #fea;
   padding-left: 10px;
+  border: 3px solid #fea;
 }
 #map { position:absolute; top:80px; bottom:0; width:100%; }
 #spinner {
