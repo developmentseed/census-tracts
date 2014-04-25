@@ -7,15 +7,16 @@ a {color:#567CA3;text-decoration: none;}
 a:hover {color: #4D6379;}
 #banner {
   position:absolute;
-  top:0;height: 80px;
+  bottom:0;
+  height: 54px;
   width: 100%;
   background:#fff;
   z-index: 100;
-  border-bottom: 1px solid #bbb;
+/*  border-bottom: 1px solid #bbb;*/
 }
 #banner img.il {
   cursor: pointer;
-  width: 81px;
+  width: 60px;
   float: left;
   margin: 6px;
   opacity: .6;
@@ -23,41 +24,43 @@ a:hover {color: #4D6379;}
 #banner img.il:hover {
   opacity: .8;
 }
-#banner h1 {
+#banner h3 {
   float: left;
-  font-size: 30px;
-  line-height: 40px
 }
 #banner .switcher {
   float: left;
-  margin: 20px 0px 20px 20px;
-  border: 1px solid #ccc;
+  margin: 10px 10px 0 30px;
+  border: 1px solid #ddd;
 }
   .switcher a {
     display: block;
     float: left;
-    cursor: pointer;
     background: #fff;
-    padding: 10px;
+    cursor:pointer;
+    padding: 12px;
     color: #567CA3;
-    text-decoration: none;
+    font-size:12px;
+    transition: all 100ms linear;
   }
   .switcher a.all {
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #ddd;
   }
   .switcher a:hover, a.active {
-    background: #eee;
+    background: #ddd;
     color: #4D6379;
   }
 .legend {
-  padding:25px 0px;
+  border-top:1px solid #ddd;
+  margin:20px 0 0 0;
+  padding:20px 0px;
 }
 .legend li {
   list-style: none;
   float: left;
+  font-size:12px;
 }
 .legend span {
-  padding: 0px 12px;
+  padding: 0px 10px;
   margin-right: 10px;
 }
 span.ten {
@@ -69,7 +72,12 @@ span.two {
   padding-left: 10px;
   border: 3px solid #fea;
 }
-#map { position:absolute; top:80px; bottom:0; width:100%; }
+#map {
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:100%;
+  }
 #spinner {
   display: none;
   width: 25px;
@@ -78,18 +86,16 @@ span.two {
   position: relative;
 }
 span.icon {
-  width: 28px;
-  height: 28px;
+  width: 16px;
+  height: 16px;
   padding-right: 10px;
+  background-size:60%;
   background-repeat: no-repeat;
   display: inline-block;
-  opacity: .5;
-  cursor: pointer;
-  margin: 25px;
-  float: right;
-}
-span.icon:hover {
   opacity: .8;
+  cursor: pointer;
+  margin: 24px;
+  float: right;
 }
 #about {
   opacity: 0;
@@ -98,11 +104,10 @@ span.icon:hover {
   background: rgba(255, 255, 255, 0.9);
   height: auto;
   position: absolute;
-  right: 0px;
-  bottom: 0px;
-  top: 80px;
+  top:20px;
+  right: 20px;
   z-index: 10;
-  padding: 20px;
+  padding: 10px 20px;
 }
 #about.active {
   opacity: 1;
