@@ -8,7 +8,6 @@ var oldTractsGeo,
 	changedTracts,
 	closeTooltip,
 	colors = ['#FEA','#97B6C1','#8C9AC1','#E2FFD7','#8A9BCC','#B27667'],
-	layerGroup = L.layerGroup(),
 	newLayer,
 	popup = new L.Popup({ autoPan: false }),
 	layers = [],
@@ -90,10 +89,13 @@ function hashTracts(id) {
 			fillColor: colors[i]
 			} 
 		});
-		layerGroup.addLayer(newLayer, true);
-		// Push to layers array to clear later
+		// Push to layers array to clear later and add featurGroup below
 		layers.push(newLayer);
-		if (i == IDs.length - 1){map.addLayer(layerGroup,true)}
+		if (i == IDs.length - 1){
+			var underLayer = L.featureGroup(layers)
+				.addTo(map)
+				.bringToBack();
+		}
 	});
 }
 function showOldTracts(e) {
@@ -116,10 +118,13 @@ function showOldTracts(e) {
 			fillColor: colors[i]
 			} 
 		});
-		layerGroup.addLayer(newLayer, true);
-		// Push to layers array to clear later
+		// Push to layers array to clear later and add featurGroup below
 		layers.push(newLayer);
-		if (i == IDs.length - 1){map.addLayer(layerGroup,true)}
+		if (i == IDs.length - 1){
+			var underLayer = L.featureGroup(layers)
+				.addTo(map)
+				.bringToBack();
+		}
 	});
 }
 function onEachFeature(feature, layer) {
