@@ -15,7 +15,7 @@ var oldTractsGeo,
 	sigChanges = [];
 // Get 2000 tract data
 $.ajax({
-	url: '/census-tracts/data/json/2000.json',
+	url: 'data/json/2000.json',
 	dataType: 'json',
 	success: function (json) {
 		oldTracts = json;
@@ -23,7 +23,7 @@ $.ajax({
 });
 // Get 2010 tract data
 $.ajax({
-	url: '/census-tracts/data/json/2010.json',
+	url: 'data/json/2010.json',
 	dataType: 'json',
 	success: function (json) {
 		newTracts = json;
@@ -32,7 +32,7 @@ $.ajax({
 });
 // Get 2000 tract geo data, ready to be called on click of 2010 tracts
 $.ajax({
-	url: '/census-tracts/data/geo/il_tracts_2000.json',
+	url: 'data/geo/il_tracts_2000.json',
 	async: false,
 	dataType: 'json',
 	success: function (json) {
@@ -41,7 +41,7 @@ $.ajax({
 });
 // 2000 tracts
 $.ajax({
-	url: '/census-tracts/data/json/changed_2010.json',
+	url: 'data/json/changed_2010.json',
 	async: false,
 	dataType: 'json',
 		success: function (json) {
@@ -50,7 +50,7 @@ $.ajax({
 });
 // 2010 tracts
 $.ajax({
-	url: '/census-tracts/data/geo/il_tracts.json',
+	url: 'data/geo/il_tracts.json',
 	async: false,
 	dataType: 'json',
 	success: function (json) {
