@@ -17,9 +17,8 @@ The detailed [explanation of census tract changes](https://www.census.gov/geo/ma
 ![](http://i.imgur.com/2mBj9QK.png)
 
 
-These files are then referenced in `site.js` when a user clicks on the map, to pull the appropriate 2000 tracts that appear under the 2010 tracts. 
+These files are then referenced in `site.js` when a user clicks on the map, to pull the appropriate 2000 tracts that appear under the 2010 tracts. See inline comments in [script.js](https://github.com/developmentseed/census-tracts/blob/gh-pages/script.js#L77). 
 
-See inline comments in `process.py` and `script.js` to understand functionality. 
 
 ## TopoJSON
 
@@ -47,6 +46,14 @@ http://developmentseed.org/census-tracts/#17111871500)
 
 The purple 2000 tract contributes 0 percent population and area because Census calculates all percentages to 2 decimal places. 
 
+### Javascript
+
+The site uses underscore.js, and jquery (included in [ext folder](https://github.com/developmentseed/census-tracts/tree/gh-pages/ext)). 
+
+[Mapbox.js](mapbox.com/mapbox.js) and [Topojson](https://github.com/mbostock/topojson) libraries are referenced externally. 
+
+
+Inline comments in `script.js` explain functionality. 
 
 ## Contribute
 
