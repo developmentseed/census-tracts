@@ -50,7 +50,7 @@ http://developmentseed.org/census-tracts/#17111871500)
 
 The purple 2000 tract contributes 0 percent population and area because Census calculates all percentages to 2 decimal places. 
 
-### Javascript
+## Javascript
 
 The site uses underscore.js, and jquery (included in [ext folder](https://github.com/developmentseed/census-tracts/tree/gh-pages/ext)). 
 
