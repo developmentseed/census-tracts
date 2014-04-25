@@ -144,12 +144,21 @@ table {
   border-collapse:separate;
   *border-collapse:collapsed;
   }
+  table tr.two td {
+    border-bottom: 1px solid #999;
+  }
+   td.year {
+    background: #fff;
+    border-right: 1px solid #999;
+  }
+  table th {
+    border-bottom: 1px solid #999;
+  }
   table th,
   table td {
   padding:8px;
   line-height:18px;
   text-align:left;
-  border-top:1px solid #ddd;
   }
   table th {
   background:#f6f6f6;
@@ -163,15 +172,6 @@ table {
   table thead:first-child tr th,
   table thead:first-child tr td {
   border-top:0;
-  }
-  table tbody + tbody {
-  border-top:2px solid #ddd;
-  }
-  table th + th,
-  table td + td,
-  table th + td,
-  table td + th {
-  border-left:1px solid #ddd;
   }
   table thead:first-child tr:first-child th,
   table tbody:first-child tr:first-child th,

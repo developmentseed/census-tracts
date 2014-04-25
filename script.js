@@ -136,23 +136,32 @@ function onEachFeature(feature, layer) {
 }
 function mousemove(e) {
 	var layer = e.target,
-		rows,
-		newData = newTracts[layer.feature.id];
-
-	popup.setLatLng(e.latlng);
-	var parts = (_.pluck(newData, 'part')).join();
-	var rows = [],
+		newData = newTracts[layer.feature.id],
+		rows = [],
 		table;
 
 	_.each(newData, function(x, i) {
-		rows.push('<tr style=background-color:'+colors[i]+';><td>'+ x.geoid +'</td><td>'+ x.part +'</td>'+
-		'<td>'+ x.poppct +'</td><td>'+ x.areapct +'</tr>')
+		if (i == 0){rows.push('<tr style=background-color:'+colors[i]+';><td class="year">2000</td><td>'+ x.geoid +'</td>'+
+			'<td>'+ x.poppct +'</td><td>'+ x.areapct +'</tr>')
+		} else {
+			rows.push('<tr style=background-color:'+colors[i]+';border-bottom:none;>'+
+				'<td class="year" style=border-bottom: none;></td><td>'+ x.geoid +'</td>'+
+				'<td>'+ x.poppct +'</td><td>'+ x.areapct +'</tr>')
+		}
 		if (i == newData.length - 1){
-		var formatRows = rows.join();
-		table = '<span class="large">2010 GEOID: ' + layer.feature.id + '</span><table><tr><td><em>This tract is composed of these <b>2000</b> tracts</em></td></tr><th>GEOID</th><th>Part</th><th>% Pop</th><th>% Area</th>' + rows + '</table>'
+			createTooltip();
 		}
 	});
-	popup.setContent('<div class="title"></div>'+table);
+	function createTooltip() {
+		var formatRows = rows.join();
+			table = '<table>'+
+			'<th>Year</th><th>GEOID</th><th>% Pop</th><th>% Area</th>' +
+			'<tr class="two"><td class="year">2010</td><td>' +layer.feature.id + '</td><td>100</td>'+
+			'<td>100</td></tr>'+ rows +'</table>';
+		popup.setLatLng(e.latlng);
+		popup.setContent(table);
+	}
+
 
 	if (!popup._map) popup.openOn(map);
 	window.clearTimeout(closeTooltip);
