@@ -6,9 +6,11 @@ p {
 a {color:#567CA3;text-decoration: none;}
 a:hover {color: #4D6379;}
 #banner {
-  position:absolute;
+  position:fixed;
   bottom:0;
-  height: 54px;
+  left: 0;
+  right: 0;
+  height: 60px;
   width: 100%;
   background:#fff;
   z-index: 100;
@@ -86,6 +88,9 @@ span.two {
   position: relative;
 }
 span.icon {
+  position: absolute;
+  margin: 30px;
+  right: 0px;
   width: 16px;
   height: 16px;
   padding-right: 10px;
@@ -94,8 +99,6 @@ span.icon {
   display: inline-block;
   opacity: .8;
   cursor: pointer;
-  margin: 24px;
-  float: right;
 }
 #about {
   opacity: 0;
